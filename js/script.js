@@ -346,12 +346,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = serviceModalData[serviceKey];
     if (!data) return;
 
-    const iconHtml = `<i class="fa-solid ${data.icon}"></i>`;
+    const headerIcon = document.querySelector('.modal-header-icon');
+    if (headerIcon) {
+      headerIcon.innerHTML = `<i class="fa-solid ${data.icon}"></i>`;
+    }
+
     const techTags = data.tech.map(t => `<span class="modal-tag">${t}</span>`).join('');
     const benefitsList = data.benefits.map(b => `<li><i class="fa-solid fa-check"></i> ${b}</li>`).join('');
 
     modalBody.innerHTML = `
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;"></div>
       <h2>${data.title}</h2>
       <p class="modal-desc">${data.description}</p>
       <h4>Technologies</h4>
@@ -370,11 +373,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   };
 
-  document.querySelectorAll('.service-card, .service-detailed-card').forEach(card => {
-    card.addEventListener('click', () => {
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('.service-card, .service-detailed-card');
+    if (card) {
       const service = card.getAttribute('data-service');
       if (service) openModal(service);
-    });
+    }
   });
 
   if (modalClose) modalClose.addEventListener('click', closeModal);
@@ -543,8 +547,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---------- Console Branding ----------
   console.log(
     '%c Arthanta %c v2.0 ',
-    'background: linear-gradient(135deg, #00d4ff, #b14cff); color: #fff; font-size: 1.1rem; font-weight: bold; padding: 6px 12px; border-radius: 4px 0 0 4px;',
-    'background: #12121e; color: #9494b8; font-size: 1.1rem; font-weight: bold; padding: 6px 12px; border-radius: 0 4px 4px 0;'
+    'background: linear-gradient(135deg, #6366F1, #4F46E5); color: #fff; font-size: 1.1rem; font-weight: bold; padding: 6px 12px; border-radius: 4px 0 0 4px;',
+    'background: #172033; color: #9494b8; font-size: 1.1rem; font-weight: bold; padding: 6px 12px; border-radius: 0 4px 4px 0;'
   );
   console.log(
     '%c Built with precision in India. Let\'s build something great together.',

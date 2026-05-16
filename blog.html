@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Arthanta — Thoughts on building</title>
+  <meta name="description" content="Read about Arthanta's journey building mobile apps, full-stack platforms, and AI solutions. Honest thoughts from a small team in Kalaburagi.">
+  <meta property="og:title" content="Blog — Arthanta">
+  <meta property="og:description" content="Thoughts on building software, growing a team, and staying honest.">
+  <meta name="theme-color" content="#0F172A">
+
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,800,900&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="noise-overlay"></div>
+  <div class="scroll-progress"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <nav class="navbar scrolled" role="navigation">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <span class="logo-mark">A</span>
+        <span>Arthanta</span>
+      </a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar-social">
+        <a href="https://www.instagram.com/arthanta.tech?igsh=MXUxYXV5bG8zN2Z4bQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/arthanta" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://x.com/ArthantaSystems" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+      <div class="navbar-cta">
+        <a href="contact.html" class="btn-arthanta btn-primary btn-sm">
+          <i class="fa-regular fa-comment"></i> Start a Project
+        </a>
+      </div>
+      <button class="navbar-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <div style="margin-top:32px;">
+      <a href="contact.html" class="btn-arthanta btn-primary mobile-cta-btn" style="display:inline-flex;">
+        <i class="fa-regular fa-comment"></i> Start a Project
+      </a>
+    </div>
+    <div style="margin-top:24px;display:flex;gap:16px;">
+      <a href="https://www.instagram.com/arthanta.tech?igsh=MXUxYXV5bG8zN2Z4bQ==" target="_blank" rel="noopener noreferrer" style="font-size:1.2rem;border:none;padding:0;"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/arthanta" target="_blank" rel="noopener noreferrer" style="font-size:1.2rem;border:none;padding:0;"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://x.com/ArthantaSystems" target="_blank" rel="noopener noreferrer" style="font-size:1.2rem;border:none;padding:0;"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </div>
+
+  <section class="page-header">
+    <div class="page-header-bg">
+      <div class="hero-glow hero-glow-1" style="top:-20%;right:-5%;"></div>
+      <div class="hero-glow hero-glow-2" style="bottom:-20%;left:-5%;"></div>
+    </div>
+    <div class="page-header-content">
+      <span class="section-label">Blog</span>
+      <h1 class="heading-xl">Thoughts on <span class="text-gradient">building</span></h1>
+      <p>Honest stories from a small team figuring things out as we go.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-premium">
+      <div class="blog-list" style="max-width:720px;margin:0 auto;">
+
+        <article class="blog-card reveal" style="margin-bottom:40px;padding:32px;background:var(--color-bg-card);border-radius:var(--radius-lg);border:1px solid var(--color-border);">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+            <span style="font-size:0.72rem;color:var(--color-text-muted);">May 14, 2026</span>
+            <span style="width:4px;height:4px;border-radius:50%;background:var(--color-text-muted);"></span>
+            <span style="font-size:0.72rem;color:var(--color-accent-indigo);font-weight:500;">Building in Public</span>
+          </div>
+          <h2 style="font-size:1.25rem;margin-bottom:10px;">Why We Started Arthanta</h2>
+          <p style="color:var(--color-text-secondary);font-size:0.9rem;line-height:1.7;margin-bottom:16px;">
+            Three friends in a college lab, frustrated by how broken the tech agency model was. Either you paid a fortune for a big firm or you gambled on someone who couldn't deliver. We believed there had to be a third option.
+          </p>
+          <p style="color:var(--color-text-secondary);font-size:0.9rem;line-height:1.7;margin-bottom:16px;">
+            So we started Arthanta. Not with a business plan or funding — just a shared conviction that good software shouldn't require a corporate budget or a blind leap of faith.
+          </p>
+          <p style="color:var(--color-text-secondary);font-size:0.9rem;line-height:1.7;">
+            This is the story of how we got here, what we've learned, and why we're still at it.
+          </p>
+        </article>
+
+        <article class="blog-card reveal" style="margin-bottom:40px;padding:32px;background:var(--color-bg-card);border-radius:var(--radius-lg);border:1px solid var(--color-border);">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+            <span style="font-size:0.72rem;color:var(--color-text-muted);">April 28, 2026</span>
+            <span style="width:4px;height:4px;border-radius:50%;background:var(--color-text-muted);"></span>
+            <span style="font-size:0.72rem;color:var(--color-accent-indigo);font-weight:500;">Process</span>
+          </div>
+          <h2 style="font-size:1.25rem;margin-bottom:10px;">How We Actually Build Products</h2>
+          <p style="color:var(--color-text-secondary);font-size:0.9rem;line-height:1.7;margin-bottom:16px;">
+            Every agency has a "process" page. Ours is simple: we listen, we design, we build, we ship. No 50-page proposals, no discovery phases that cost more than the MVP.
+          </p>
+          <p style="color:var(--color-text-secondary);font-size:0.9rem;line-height:1.7;margin-bottom:16px;">
+            Two-week sprints. Working software every cycle. Daily updates. You talk to the people actually writing the code. That's it. That's the secret.
+          </p>
+          <p style="color:var(--color-text-secondary);font-size:0.9rem;line-height:1.7;">
+            We wrote this down because we realized most people don't know what to expect when working with a dev agency. Here's exactly how we work, what we need from you, and what you can expect from us.
+          </p>
+        </article>
+
+        <article class="blog-card reveal" style="margin-bottom:40px;padding:32px;background:var(--color-bg-card);border-radius:var(--radius-lg);border:1px solid var(--color-border);">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+            <span style="font-size:0.72rem;color:var(--color-text-muted);">April 10, 2026</span>
+            <span style="width:4px;height:4px;border-radius:50%;background:var(--color-text-muted);"></span>
+            <span style="font-size:0.72rem;color:var(--color-accent-indigo);font-weight:500;">Lessons Learned</span>
+          </div>
+          <h2 style="font-size:1.25rem;margin-bottom:10px;">Things We Wish Clients Knew</h2>
+          <p style="color:var(--color-text-secondary);font-size:0.9rem;line-height:1.7;margin-bottom:16px;">
+            After working with a handful of clients, here are the things we wish every client knew before starting a project. Some of these we learned the hard way.
+          </p>
+          <p style="color:var(--color-text-secondary);font-size:0.9rem;line-height:1.7;margin-bottom:16px;">
+            That a clear brief saves weeks. That "I'll know it when I see it" actually costs more. That the best products are built collaboratively, not handed off over a wall.
+          </p>
+          <p style="color:var(--color-text-secondary);font-size:0.9rem;line-height:1.7;">
+            None of this is rocket science. But you'd be surprised how many agencies don't say it out loud.
+          </p>
+        </article>
+
+        <div class="reveal" style="text-align:center;padding:40px 0;">
+          <p style="color:var(--color-text-muted);font-size:0.9rem;">More posts coming soon.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container-premium">
+      <div class="cta-content reveal">
+        <h2 class="heading-lg">Have something to <span class="text-gradient">build</span>?</h2>
+        <p>Let's talk. No pitch, no pressure — just an honest conversation about your project.</p>
+        <a href="contact.html" class="btn-arthanta btn-primary btn-lg">
+          Start a Conversation <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-logo" style="margin-bottom:16px;">
+          <span class="logo-mark">A</span>
+          <span>Arthanta</span>
+        </a>
+        <p>A small team building big things. Based in Kalaburagi, serving clients worldwide.</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">Pages</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Mobile Apps</a></li>
+          <li><a href="services.html">Full Stack</a></li>
+          <li><a href="services.html">AI / ML</a></li>
+          <li><a href="services.html">SaaS</a></li>
+          <li><a href="services.html">Video & Motion</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Connect</h4>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/arthanta.tech?igsh=MXUxYXV5bG8zN2Z4bQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/arthanta" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://x.com/ArthantaSystems" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="mailto:arthanta.systems@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+        <div class="footer-newsletter">
+          <p>Get occasional updates (no spam, ever).</p>
+          <form action="https://formspree.io/f/mojroqne" method="POST">
+            <input type="hidden" name="_subject" value="Newsletter Subscription — Arthanta">
+            <div class="input-group">
+              <input type="email" name="email" placeholder="your@email.com" required aria-label="Email">
+              <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Arthanta. All rights reserved.</p>
+      <p>Built with <i class="fa-solid fa-heart" style="color:#6366F1;"></i> in Kalaburagi, India</p>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" role="dialog" aria-modal="true" aria-label="Service details">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-header-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+        <button class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <div class="floating-cta">
+    <span class="cta-tooltip">Free Consultation</span>
+    <a href="contact.html" class="floating-btn" aria-label="Get free consultation">
+      <i class="fa-regular fa-comment"></i>
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

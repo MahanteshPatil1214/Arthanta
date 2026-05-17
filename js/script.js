@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (loader) {
     setTimeout(() => {
       loader.classList.add('hidden');
-    }, 600);
+      document.body.style.overflow = '';
+    }, 1200);
+    document.body.style.overflow = 'hidden';
   }
 
   // ---------- Custom Cursor ----------
@@ -503,7 +505,92 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---------- Smooth Scroll for Anchor Links ----------
+  // ---------- Ripple Effect on Buttons ----------
+  const rippleBtns = document.querySelectorAll('.btn-arthanta');
+  rippleBtns.forEach(btn => {
+    btn.classList.add('ripple');
+    btn.addEventListener('click', function(e) {
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+      const ripple = document.createElement('span');
+      ripple.className = 'ripple-effect';
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = x + 'px';
+      ripple.style.top = y + 'px';
+      this.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove());
+    });
+  });
+
+  // ---------- Glow Follow on Cards ----------
+  const glowCards = document.querySelectorAll('.service-card, .service-detailed-card, .value-card, .team-card, .blog-card');
+  glowCards.forEach(card => {
+    card.classList.add('glow-follow');
+    const spot = document.createElement('div');
+    spot.className = 'glow-spot';
+    card.appendChild(spot);
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      spot.style.left = (e.clientX - rect.left) + 'px';
+      spot.style.top = (e.clientY - rect.top) + 'px';
+    });
+  });
+
+  // ---------- Magnetic Buttons ----------
+  const magneticBtns = document.querySelectorAll('.btn-arthanta, .floating-btn');
+  if (window.innerWidth > 992) {
+    magneticBtns.forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = (e.clientX - rect.left - rect.width / 2) * 0.25;
+        const y = (e.clientY - rect.top - rect.height / 2) * 0.25;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+      });
+    });
+  }
+
+  // ---------- 3D Tilt Effect on Cards ----------
+  const tiltCards = document.querySelectorAll('.service-card, .service-detailed-card, .value-card, .team-card');
+  if (window.innerWidth > 992) {
+    tiltCards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${y * -8}deg) translateY(-4px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  }
+
+  // ---------- Split Text Animation ----------
+  const splitTargets = document.querySelectorAll('.word-split');
+  splitTargets.forEach(el => {
+    const text = el.textContent.trim();
+    const words = text.split(' ');
+    el.innerHTML = words.map(word => {
+      const chars = word.split('').map(char => `<span class="char">${char}</span>`).join('');
+      return `<span class="word">${chars}</span>`;
+    }).join(' ');
+    const splitObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          splitObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    splitObserver.observe(el);
+  });
+
+  // ---------- Smooth Anchor Scroll ----------
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const targetId = anchor.getAttribute('href');
